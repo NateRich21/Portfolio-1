@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import App from './Components/App/App.js';
+import SiteHeader from './Components/SiteHeader/SiteHeader';
 import CustomNavBar from './Components/CustomerNavBar/CustomNavBar.js';
 import Home from './Components/Home/Home.js';
 import Projects from './Components/Projects/Projects';
@@ -15,15 +15,23 @@ import Contact from './Components/Contact/Contact.js';
 
 
 class Index extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.setState = {
+            urlPath: ''
+        }
+    }
 
     render() {
         return(
         
             <Router>
                 <CustomNavBar />
+                <SiteHeader />
 
                 <Route 
-                    path="/home"
+                    path="/"
                     exact
                     component={Home} />
                 <Route
@@ -33,7 +41,7 @@ class Index extends React.Component {
                 <Route 
                     path="/projects"
                     exact
-                    component={Projects}/>
+                    render={props => <Projects {...props}/>} />
                 <Route 
                     path="/contact"
                     exact

@@ -1,0 +1,48 @@
+.my-header {
+  background-color: rgb(27, 27, 27);
+  margin: 0 auto;
+  padding-bottom: 200px;
+  background: radial-gradient(110% 50% at bottom, transparent 50%, rgb(27, 27, 27) 51%);
+}
+
+.header-container {
+  display: flex;
+  margin-left: 275px;
+  margin-right: 275px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.header-container h1 {
+  font-weight: bolder;
+}
+
+.header-content {
+  color: rgb(231, 231, 231);
+   
+}
+
+.header-content h1 {
+  padding-bottom: 25px;
+}
+
+.header-image {
+   
+
+}
+
+.header-image img {
+  width: 268px;
+  height: 400px;
+}
+
+.img-figure {
+  border: black 20px solid;
+}
+
+.header-button-container {
+   
+  padding-top: 35px;
+  padding-left: 15px;  
+}
