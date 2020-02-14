@@ -5,37 +5,58 @@ import { Link } from 'react-router-dom'
 import './SiteHeader.css'
 
 class SiteHeader extends React.Component {
+	constructor(props) {
+		super(props);
 
-	render() {
-		return(
-			<div className='my-header'>
-				<div className="header-container">
-					<div className="header-content">
-						<h1 className="header-title">
-							{this.props.currentHeader.headerTitle}
-						</h1>
-						<h2 className="header-subtitle">
-							{this.props.currentHeader.subText}
-						</h2>
-						<div className="header-button-container">
-							<Link to="/projects">
-								<MDBBtn 
-									color="info" 
-									size="lg" >
-									My Projects
-								</MDBBtn>
-							</Link>
+	
+	}
+
+	configureButton = () => {
+		if (this.props.currentHeader.buttonText) {
+			return (
+				<div className="header-button-container">
+					<Link to={this.props.currentHeader.buttonLinkPath}>
+						<MDBBtn 
+							color="info" 
+							size="lg" >
+							{this.props.currentHeader.buttonText}
+						</MDBBtn>
+					</Link>
+				</div>
+			)
+		}
+	}
+
+	configureImage = () => {
+		if (this.props.currentHeader.imgSrc) {
+			return(
+				<div className="header-image">  
+					<div className="img-figure">
+						<img src={this.props.currentHeader.imgSrc}/>
+					</div>  
+				</div>
+			)
+		}
+	}
+
+		render() {
+			return(
+				<div className='my-header'>
+					<div className="header-container">
+						<div className="header-content">
+							<h1 className="header-title">
+								{this.props.currentHeader.headerTitle}
+							</h1>
+							<h4 className="header-subtitle">
+								{this.props.currentHeader.subText}
+							</h4>
+							{this.configureButton()}
 						</div>
-					</div>
-					<div className="header-image">  
-						<div className="img-figure">
-							<img src="" />
-						</div>  
+						{this.configureImage()}
 					</div>
 				</div>
-			</div>
-		)
-	}
+			)
+		}
 }
 
 export default SiteHeader;

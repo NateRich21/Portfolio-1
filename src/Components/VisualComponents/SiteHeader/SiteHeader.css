@@ -1,17 +1,21 @@
 .my-header {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(27, 27, 27);
   margin: 0 auto;
   padding-bottom: 200px;
   background: radial-gradient(110% 50% at bottom, transparent 50%, rgb(27, 27, 27) 51%);
+  justify-content: center;
 }
+
 
 .header-container {
   display: flex;
+  flex-direction: row;
   margin-left: 275px;
   margin-right: 275px;
   align-items: center;
-  align-content: center;
-  justify-content: space-between;
+  justify-content: space-around;
   
 }
 
@@ -22,12 +26,13 @@
 
 .header-content {
   color: rgb(231, 231, 231);
-  width: 50%;
-   
+  width: auto 0;
 }
 
 .header-content h1 {
   padding-bottom: 25px;
+  padding-top: 25px;
+
 }
 
 .header-image {
@@ -42,6 +47,7 @@
 
 .img-figure {
   border: black 20px solid;
+  margin-left: 200px;
 }
 
 .header-button-container {
