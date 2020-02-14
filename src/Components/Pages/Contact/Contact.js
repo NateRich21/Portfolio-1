@@ -4,6 +4,7 @@ class Contact extends React.Component {
 
     componentDidMount() {
         this.props.updatePath('/contact')
+        this.props.updateHeaderContent('/contact');
     }
 
     render() {

@@ -3,7 +3,8 @@ import React from 'react';
 class About extends React.Component {
 
     componentDidMount() {
-        this.props.updatePath('/about')
+        this.props.updatePath('/about');
+        this.props.updateHeaderContent('/about');
     }
 
     render() {

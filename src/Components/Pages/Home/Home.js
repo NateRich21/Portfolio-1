@@ -3,7 +3,8 @@ import React from 'react';
 class Home extends React.Component {
 
     componentDidMount() {
-        this.props.updatePath('/home')
+        this.props.updatePath('/home');
+        this.props.updateHeaderContent('/home');
     }
 
     render() {

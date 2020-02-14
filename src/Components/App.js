@@ -18,31 +18,30 @@ import Contact from './Components/Pages/Contact/Contact.js';
 
 
 
-class Index extends React.Component {
+class App extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             urlPath: "",
-            headerContent: headerContent,
-            currentHeader: {}
+            headerItems: {}
         }
 
         this.updatePath = this.updatePath.bind(this);
         this.updateHeaderContent = this.updateHeaderContent.bind(this);
-
     }
 
     updatePath = (pathname) => {
         this.setState({urlPath: pathname})
     }   
 
-    updateHeaderContent = (pathname) => {
-        if (pathname === '/home') {  this.setState({ currentHeader: this.state.headerContent.home })  };
-        if (pathname === '/about') {  this.setState({ currentHeader: this.state.headerContent.about })  };
-        if (pathname === '/projects') {  this.setState({ currentHeader: this.state.headerContent.projects })  };
-        if (pathname === '/contact') {  this.setState({ currentHeader: this.state.headerContent.contact })  };
-    }
+    updateHeaderContent = () => {
+		if (this.state.urlPath === '/home') { 
+            this.setState({ headerItems: headerContent.home }) 
+        };
+        if (this.state.urlPath === '/projects') { this.setState({ headerItems: headerContent.projects }) };
+        if (this.state.urlPath === '/about') { this.setState({ headerItems: headerContent.about }) };
+		if (this.state.urlPath === '/contact') { this.setState({ headerItems: headerContent.contact }) };	};
 
     render() {
         return(
@@ -53,7 +52,7 @@ class Index extends React.Component {
                     path='/(home|about|projects|contact)/'
                     exact
                     render={props => <SiteHeader {...props} 
-                    currentHeader={this.state.currentHeader}
+                    updatePath={this.updatePath}
                     urlPath={this.state.urlPath} />}
                 />
                <Switch>
@@ -62,7 +61,6 @@ class Index extends React.Component {
                         exact
                         render={props => <Home {...props} 
                         updatePath={this.updatePath}
-                        urlPath={this.urlPath}
                         updateHeaderContent={this.updateHeaderContent} />}
                     />
                     <Route
@@ -70,7 +68,6 @@ class Index extends React.Component {
                         exact  
                         render={props => <About {...props} 
                         updatePath={this.updatePath}
-                        urlPath={this.urlPath}
                         updateHeaderContent={this.updateHeaderContent} />}
                     />
                     <Route 
@@ -78,7 +75,6 @@ class Index extends React.Component {
                         exact
                         render={props => <Projects {...props} 
                         updatePath={this.updatePath}
-                        urlPath={this.urlPath}
                         updateHeaderContent={this.updateHeaderContent} />}
                     />
                     <Route 
@@ -86,7 +82,6 @@ class Index extends React.Component {
                         exact
                         render={props => <Contact {...props} 
                         updatePath={this.updatePath}
-                        urlPath={this.urlPath}
                         updateHeaderContent={this.updateHeaderContent} />}
                     />
                </Switch>
@@ -95,9 +90,4 @@ class Index extends React.Component {
     }
 }
 
-ReactDOM.render(<Index />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+export default App;

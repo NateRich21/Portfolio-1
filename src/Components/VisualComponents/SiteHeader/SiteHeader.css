@@ -12,14 +12,17 @@
   align-items: center;
   align-content: center;
   justify-content: space-between;
+  
 }
 
 .header-container h1 {
   font-weight: bolder;
+  
 }
 
 .header-content {
   color: rgb(231, 231, 231);
+  width: 50%;
    
 }
 
