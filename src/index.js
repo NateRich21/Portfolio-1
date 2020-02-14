@@ -42,7 +42,7 @@ class Index extends React.Component {
                     render={props => <SiteHeader {...props} 
                     updatePath={this.updatePath}/>}
                      />
-                    <Switch>
+                 
                         <Route 
                             path="/home"
                             exact
@@ -67,7 +67,7 @@ class Index extends React.Component {
                             render={props => <Contact {...props} 
                             updatePath={this.updatePath}/>}
                         />
-                    </Switch>
+                    
             </Router>
         )
     }
