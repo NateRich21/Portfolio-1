@@ -8,9 +8,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './Components/App/App.js';
 import CustomNavBar from './Components/CustomerNavBar/CustomNavBar.js';
-import Home from './Components/Home/Home.js'
-import Projects from './Components/Projects/Projects'
-import About from './Components/About/About.js'
+import Home from './Components/Home/Home.js';
+import Projects from './Components/Projects/Projects';
+import About from './Components/About/About.js';
+import Contact from './Components/Contact/Contact.js';
 
 
 class Index extends React.Component {
@@ -33,6 +34,10 @@ class Index extends React.Component {
                     path="/projects"
                     exact
                     component={Projects}/>
+                <Route 
+                    path="/contact"
+                    exact
+                    component={Contact}/>
             </Router>
         )
     }
