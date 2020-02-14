@@ -5,11 +5,6 @@ import { Link } from 'react-router-dom'
 import './SiteHeader.css'
 
 class SiteHeader extends React.Component {
-	constructor(props) {
-		super(props);
-
-	
-	}
 
 	configureButton = () => {
 		if (this.props.currentHeader.buttonText) {
@@ -30,7 +25,7 @@ class SiteHeader extends React.Component {
 	configureImage = () => {
 		if (this.props.currentHeader.imgSrc) {
 			return(
-				<div className="header-image">  
+				<div className="header-image">
 					<div className="img-figure">
 						<img src={this.props.currentHeader.imgSrc}/>
 					</div>  
@@ -43,7 +38,9 @@ class SiteHeader extends React.Component {
 			return(
 				<div className='my-header'>
 					<div className="header-container">
-						<div className="header-content">
+						<div 
+							className="header-content"
+							style={{textAlign: this.props.currentHeader.imgSrc ? "left" : "center"}} >
 							<h1 className="header-title">
 								{this.props.currentHeader.headerTitle}
 							</h1>

@@ -12,7 +12,7 @@ class CustomNavBar extends React.Component {
         <nav>
           <div className="navbar-container">
             <div className="brand-container">
-              <Link to="/home">Nate <br/> Richardson</Link>
+              <Link to="/home">Nate Richardson</Link>
             </div>
     
             <div className="link-container">

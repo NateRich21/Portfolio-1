@@ -1,12 +1,13 @@
 .site-header {
     background-color: rgb(27, 27, 27);
+    
 }
 
 .navbar-container {
     display: flex;
     align-items: stretch;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 5px;
+    padding-bottom: 40px;
     align-items: center;
     align-content: center;
     margin-right: 150px;
@@ -19,14 +20,13 @@
 
 .brand-container {
     flex: 3;
-    color: rgb(231, 231, 231);
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 0;
     margin-right: 400px; 
 }
 
 .brand-container a{
-    color: lightgray;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 .link-container {

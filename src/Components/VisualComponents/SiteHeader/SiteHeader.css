@@ -20,17 +20,24 @@
 }
 
 .header-container h1 {
-  font-weight: bolder;
+  font-weight: 0;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
   
 }
 
 .header-content {
-  color: rgb(231, 231, 231);
   width: auto 0;
 }
 
+.header-container h4 {
+  color: rgb(173, 173, 173);
+  font-weight: normal;
+  font-size: 2rem;
+}
+
 .header-content h1 {
-  padding-bottom: 25px;
+  padding-bottom: 5px;
   padding-top: 25px;
 
 }
@@ -41,13 +48,13 @@
 }
 
 .header-image img {
-  width: 268px;
-  height: 400px;
+  width: 247px;
+  height: 346px;
 }
 
 .img-figure {
   border: black 20px solid;
-  margin-left: 200px;
+  margin-left: 150px;
 }
 
 .header-button-container {

@@ -25,17 +25,17 @@ class Index extends React.Component {
         this.state = {
             urlPath: "",
             headerContent: headerContent,
-            currentHeader: {}
+            currentHeader: {},
+            headerHasImage: Boolean
         }
 
         this.updatePath = this.updatePath.bind(this);
         this.updateHeaderContent = this.updateHeaderContent.bind(this);
-
     }
 
     updatePath = (pathname) => {
         this.setState({urlPath: pathname})
-    }   
+    }
 
     updateHeaderContent = (pathname) => {
         if (pathname === '/home') {  this.setState({ currentHeader: this.state.headerContent.home })  };
@@ -54,7 +54,8 @@ class Index extends React.Component {
                     exact
                     render={props => <SiteHeader {...props} 
                     currentHeader={this.state.currentHeader}
-                    urlPath={this.state.urlPath} />}
+                    urlPath={this.state.urlPath} 
+                    imgCheck={this.headerHasImageCheck} />}
                 />
                <Switch>
                     <Route 
