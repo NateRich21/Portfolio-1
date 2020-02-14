@@ -1,7 +1,17 @@
 import React from 'react';
 
-function About() {
-    return <h1>About</h1>;
+class About extends React.Component {
+
+    componentDidMount() {
+        this.props.updatePath('/about')
+    }
+
+    render() {
+        return(
+            <h1>About</h1>
+        )
+    }
+
 }
 
 export default About;

@@ -5,13 +5,9 @@ import { Link } from 'react-router-dom'
 import './SiteHeader.css'
 
 class SiteHeader extends React.Component {
-  constructor(props) {
-    super(props);
 
-    this.state ={
-      path: ''
-    }
-  }
+  
+
 
   render() {
     return(

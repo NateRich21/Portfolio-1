@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Link, Route, BrowserRouter as Router} from 'react-router-dom';
+import {Link, Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 import './index.css';
@@ -14,38 +14,60 @@ import About from './Components/About/About.js';
 import Contact from './Components/Contact/Contact.js';
 
 
+
+
 class Index extends React.Component {
     constructor(props) {
         super(props);
 
-        this.setState = {
-            urlPath: ''
+        this.state = {
+            urlPath: ""
         }
+
+        this.updatePath = this.updatePath.bind(this);
     }
+
+    updatePath = (pathname) => {
+        this.setState({urlPath: pathname})
+    }   
 
     render() {
         return(
         
             <Router>
                 <CustomNavBar />
-                <SiteHeader />
-
-                <Route 
-                    path="/"
-                    exact
-                    component={Home} />
                 <Route
-                    path="/about"
+                    path='/(home|about|projects|contact)/'
                     exact
-                    component={About} />
-                <Route 
-                    path="/projects"
-                    exact
-                    render={props => <Projects {...props}/>} />
-                <Route 
-                    path="/contact"
-                    exact
-                    component={Contact}/>
+                    render={props => <SiteHeader {...props} 
+                    updatePath={this.updatePath}/>}
+                     />
+                    <Switch>
+                        <Route 
+                            path="/home"
+                            exact
+                            render={props => <Home {...props} 
+                            updatePath={this.updatePath}/>}
+                        />
+                        <Route
+                            path="/about" 
+                            exact  
+                            render={props => <About {...props} 
+                            updatePath={this.updatePath}/>}
+                        />
+                        <Route 
+                            path="/projects"
+                            exact
+                            render={props => <Projects {...props} 
+                            updatePath={this.updatePath}/>}
+                        />
+                        <Route 
+                            path="/contact"
+                            exact
+                            render={props => <Contact {...props} 
+                            updatePath={this.updatePath}/>}
+                        />
+                    </Switch>
             </Router>
         )
     }
