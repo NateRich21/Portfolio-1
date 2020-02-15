@@ -1,10 +1,10 @@
 .my-header {
   display: flex;
   flex-direction: column;
-  background-color: rgb(27, 27, 27);
+  background-color: rgb(32, 32, 32);
   margin: 0 auto;
   padding-bottom: 200px;
-  background: radial-gradient(110% 50% at bottom, transparent 50%, rgb(27, 27, 27) 51%);
+  background: radial-gradient(110% 50% at bottom, transparent 50%, rgb(32, 32, 32) 51%);
   justify-content: center;
 }
 
@@ -33,9 +33,10 @@
 }
 
 .header-container h4 {
-  color: rgb(173, 173, 173);
-  font-weight: normal;
+  color: rgb(184, 184, 184);
+  font-weight: lighter;
   font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 

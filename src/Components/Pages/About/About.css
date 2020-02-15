@@ -1,12 +1,18 @@
 .about-page-container {
-    display: row;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
     align-items: center;
-    margin-right: 400px;
-    margin-left: 400px
 }
+
+.about-page {
+    text-align: left;
+    align-content: center;
+    max-width: 35%;
+}
+
+
 
 .button-row {
     display: flex;
@@ -16,4 +22,27 @@
     text-align: center;
     justify-content: center;
     padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.content-lg,
+.content-lg-top{
+    color: rgb(32, 32, 32);
+}
+
+.content-lg {
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.content-sm {
+    color: rgb(100, 100, 100);
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
