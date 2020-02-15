@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactForm from '../../VisualComponents/ContactForm/ContactForm';
 
 class Contact extends React.Component {
 
@@ -9,7 +10,9 @@ class Contact extends React.Component {
 
     render() {
         return(
-            <h1>Contact</h1>
+            <div>
+                <ContactForm />
+            </div>
         )
     }
 
