@@ -41,9 +41,9 @@ class SiteHeader extends React.Component {
 						<div 
 							className="header-content"
 							style={{textAlign: this.props.currentHeader.imgSrc ? "left" : "center"}} >
-							<h1 className="header-title">
+							<h2 className="header-title">
 								{this.props.currentHeader.headerTitle}
-							</h1>
+							</h2>
 							<h4 className="header-subtitle">
 								{this.props.currentHeader.subText}
 							</h4>

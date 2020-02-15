@@ -19,8 +19,10 @@
   
 }
 
-.header-container h1 {
-  font-weight: 0;
+.header-container h2 {
+  font-weight: normal;
+  padding-bottom: 5px;
+  padding-top: 25px;
   font-size: 4rem;
   color: rgb(255, 255, 255);
   
@@ -36,16 +38,6 @@
   font-size: 2rem;
 }
 
-.header-content h1 {
-  padding-bottom: 5px;
-  padding-top: 25px;
-
-}
-
-.header-image {
-   
-
-}
 
 .header-image img {
   width: 247px;
@@ -54,6 +46,7 @@
 
 .img-figure {
   border: black 20px solid;
+  border-radius: 5px;
   margin-left: 150px;
 }
 
