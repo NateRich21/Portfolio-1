@@ -9,7 +9,11 @@ class Home extends React.Component {
 
     render() {
         return(
-            <h1>Home</h1>
+            <div className='home-page-main-container'>
+                <section>
+                   <h1>Featured Project</h1>
+                </section>
+            </div>
         )
     }
 

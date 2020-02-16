@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './CustomNavBar.css';
-
+import '../../Styles/CustomNavBar.css';
+import Logo from'../Resources/Logo';
 class CustomNavBar extends React.Component {
 
 
@@ -12,9 +12,8 @@ class CustomNavBar extends React.Component {
         <nav>
           <div className="navbar-container">
             <div className="brand-container">
-              <Link to="/home">Nate Richardson</Link>
+                <Logo />
             </div>
-    
             <div className="link-container">
               <Link to="/about">About</Link>
             </div>
@@ -24,7 +23,9 @@ class CustomNavBar extends React.Component {
             <div className="link-container">
               <Link to="/projects">Projects</Link>
             </div>
-    
+            <div className="link-container">
+              <Link to="/tech" id='last-nav-item-Link'>Technologies</Link>
+            </div>
           </div>
         </nav>
       </div>

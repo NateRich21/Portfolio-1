@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBBtn } from 'mdbreact'
 import { Link } from 'react-router-dom'
 
-import './About.css'
+import '../../Styles/About.css';
 
 class About extends React.Component {
 

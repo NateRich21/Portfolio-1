@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBBtn } from 'mdbreact';
 import { Link } from 'react-router-dom'
 
-import './SiteHeader.css'
+import '../../Styles/SiteHeader.css';
 
 class SiteHeader extends React.Component {
 

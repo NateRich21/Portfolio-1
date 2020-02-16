@@ -1,7 +1,7 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from 'mdbreact';
 
-import './ContactForm.css'
+import '../../../Styles/ContactForm.css';
 
 
 

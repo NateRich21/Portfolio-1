@@ -3,19 +3,19 @@ import ReactDOM from 'react-dom';
 import {Link, Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
-import './index.css';
+import './Styles/index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { headerContent } from './Components/VisualComponents/SiteHeader/HeaderContent.js'
-
-import SiteHeader from './Components/VisualComponents/SiteHeader/SiteHeader';
-import CustomNavBar from './Components/VisualComponents/CustomerNavBar/CustomNavBar.js';
-import Home from './Components/Pages/Home/Home.js';
-import Projects from './Components/Pages/Projects/Projects.js';
-import About from './Components/Pages/About/About.js';
-import Contact from './Components/Pages/Contact/Contact.js';
+import { headerContent } from './Components/Resources/HeaderContent.js'
 
 
+import SiteHeader from './Components/VisualComponents/SiteHeader';
+import CustomNavBar from './Components/VisualComponents/CustomNavBar.js';
+import Home from './Components/Pages/Home.js';
+import Projects from './Components/Pages/Projects.js';
+import About from './Components/Pages/About.js';
+import Contact from './Components/Pages/Contact.js';
+import Technologies from './Components/Pages/Technologies.js';
 
 
 class Index extends React.Component {
@@ -59,33 +59,31 @@ class Index extends React.Component {
                 />
                <Switch>
                     <Route 
-                        path="/home"
-                        exact
-                        render={props => <Home {...props} 
+                        path="/home" exact render={props => <Home {...props} 
                         updatePath={this.updatePath}
                         urlPath={this.urlPath}
                         updateHeaderContent={this.updateHeaderContent} />}
                     />
                     <Route
-                        path="/about" 
-                        exact  
-                        render={props => <About {...props} 
+                        path="/about" exact render={props => <About {...props} 
                         updatePath={this.updatePath}
                         urlPath={this.urlPath}
                         updateHeaderContent={this.updateHeaderContent} />}
                     />
                     <Route 
-                        path="/projects"
-                        exact
-                        render={props => <Projects {...props} 
+                        path="/projects" exact render={props => <Projects {...props} 
                         updatePath={this.updatePath}
                         urlPath={this.urlPath}
                         updateHeaderContent={this.updateHeaderContent} />}
                     />
                     <Route 
-                        path="/contact"
-                        exact
-                        render={props => <Contact {...props} 
+                        path="/contact" exact render={props => <Contact {...props} 
+                        updatePath={this.updatePath}
+                        urlPath={this.urlPath}
+                        updateHeaderContent={this.updateHeaderContent} />}
+                    />
+                    <Route
+                        path="/tech" exact render={props => <Technologies {...props} 
                         updatePath={this.updatePath}
                         urlPath={this.urlPath}
                         updateHeaderContent={this.updateHeaderContent} />}

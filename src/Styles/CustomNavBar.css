@@ -1,0 +1,60 @@
+.site-header {
+    background-color: rgb(32, 32, 32);
+    
+}
+
+.navbar-container {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    align-items: center;
+    align-content: stretch;
+    margin-right: 50px;
+    margin-left: 50px;
+
+}
+
+.navbar-container div {
+
+}   
+
+.brand-container {
+    flex: 3;
+    font-weight: 0;
+    margin-right: 400px;
+    flex-basis: 350px;
+    padding-top: 8px;
+}
+
+
+
+
+.link-container {
+    flex: 1;
+    text-align: center;
+}
+
+.link-container #last-nav-item-Link {
+    margin-left: 10px;
+}
+
+
+.link-container a,
+.link-container #last-nav-item-Link {
+    color: rgb(149, 149, 149);
+    font-size: 1rem;
+    transition: color .2s;
+    transition: font-size .2s;
+}
+
+.link-container a:hover,
+.link-container #last-nav-item-Link:hover {
+    color:white;
+    text-decoration: none;
+    font-size: 1.15rem;  
+}
+
+
+
+
+
