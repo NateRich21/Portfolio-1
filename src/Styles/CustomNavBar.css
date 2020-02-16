@@ -1,6 +1,5 @@
 .site-header {
-    background-color: rgb(32, 32, 32);
-    
+    background-color: rgb(32, 32, 32);  
 }
 
 .navbar-container {
@@ -9,14 +8,11 @@
     padding-bottom: 40px;
     align-items: center;
     align-content: stretch;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 60px;
+    margin-left: 60px;
 
 }
 
-.navbar-container div {
-
-}   
 
 .brand-container {
     flex: 3;
@@ -27,16 +23,13 @@
 }
 
 
-
-
 .link-container {
     flex: 1;
     text-align: center;
+    min-width: 120px;
 }
 
-.link-container #last-nav-item-Link {
-    margin-left: 10px;
-}
+
 
 
 .link-container a,
@@ -45,6 +38,7 @@
     font-size: 1rem;
     transition: color .2s;
     transition: font-size .2s;
+
 }
 
 .link-container a:hover,
