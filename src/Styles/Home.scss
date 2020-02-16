@@ -1,0 +1,41 @@
+.home-page-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-page-main-container .InfoTextBox-inner-container {
+    max-width: 40%;
+}
+
+.home-page-main-container .InfoTextBox-inner-container hr,
+.home-page-main-container .PageTextImgItem-inner-container hr {
+    padding-bottom: 10px;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.home-page-main-container .InfoTextBox-inner-container {
+    max-width: 40%;
+}
+
+.page-text-content-container {
+    text-align: center;
+    align-self: center;
+}
+
+.home-page-main-container .PageTextImgItem-inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    max-width: 60%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.page-img-container img {
+    width: 500px;
+    height: 300px;
+    border: 15px solid rgb(231, 231, 231);
+}

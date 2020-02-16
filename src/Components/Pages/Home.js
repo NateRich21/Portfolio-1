@@ -1,4 +1,8 @@
 import React from 'react';
+import InfoTextBox from './PageComponents/InfoTextBox'
+import PageTextImgItem from './PageComponents/PageTextImgItem';
+
+import '../../Styles/Home.scss'
 
 class Home extends React.Component {
 
@@ -10,9 +14,10 @@ class Home extends React.Component {
     render() {
         return(
             <div className='home-page-main-container'>
-                <section>
-                   <h1>Featured Project</h1>
-                </section>
+                <InfoTextBox />
+                <PageTextImgItem />
+                
+                <InfoTextBox />
             </div>
         )
     }
