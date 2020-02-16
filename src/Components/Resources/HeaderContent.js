@@ -19,6 +19,10 @@ export const headerContent = {
         subText: "Get in touch, let me know what you need!",
         buttonText: "Contact",
         buttonLinkPath: "/contact"
+    },
+    tech: {
+        headerTitle: "Technologies",
+        subText: "Scroll down to check out the technologies that I frequently work with.",
     }
 }
 

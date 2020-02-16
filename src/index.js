@@ -38,10 +38,11 @@ class Index extends React.Component {
     }
 
     updateHeaderContent = (pathname) => {
-        if (pathname === '/home') {  this.setState({ currentHeader: this.state.headerContent.home })  };
+        if (pathname === '/') {  this.setState({ currentHeader: this.state.headerContent.home })  };
         if (pathname === '/about') {  this.setState({ currentHeader: this.state.headerContent.about })  };
         if (pathname === '/projects') {  this.setState({ currentHeader: this.state.headerContent.projects })  };
         if (pathname === '/contact') {  this.setState({ currentHeader: this.state.headerContent.contact })  };
+        if (pathname === '/tech') {  this.setState({ currentHeader: this.state.headerContent.tech })  };
     }
 
     render() {
@@ -50,8 +51,7 @@ class Index extends React.Component {
             <Router>
                 <CustomNavBar />
                 <Route
-                    path='/(home|about|projects|contact)/'
-                    exact
+                    path='/'
                     render={props => <SiteHeader {...props} 
                     currentHeader={this.state.currentHeader}
                     urlPath={this.state.urlPath} 
@@ -59,7 +59,7 @@ class Index extends React.Component {
                 />
                <Switch>
                     <Route 
-                        path="/home" exact render={props => <Home {...props} 
+                        path="/" exact render={props => <Home {...props} 
                         updatePath={this.updatePath}
                         urlPath={this.urlPath}
                         updateHeaderContent={this.updateHeaderContent} />}

@@ -7,7 +7,7 @@ import '../../Styles/Logo.scss';
 class Logo extends React.Component {
   render() {
     return(
-      <Link to='/home' id="logo-Link" className="logo-btn">
+      <Link to='/' id="logo-Link" className="logo-btn">
         <span>
           <span>
             <span>Nate Richardson</span>
