@@ -22,20 +22,19 @@
 .header-container h2 {
   font-weight: normal;
   padding-bottom: 5px;
-  padding-top: 25px;
-  font-size: 4rem;
+  font-size: 64px; 
   color: rgb(255, 255, 255);
   
 }
 
 .header-content {
-  width: auto 0;
+  max-width: 535px;
 }
 
 .header-container h4 {
   color: rgb(149, 149, 149);
   font-weight: lighter;
-  font-size: 2rem;
+  font-size: 32px;
   font-family: 'Roboto', sans-serif;
 }
 

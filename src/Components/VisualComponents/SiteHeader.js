@@ -40,7 +40,12 @@ class SiteHeader extends React.Component {
 					<div className="header-container">
 						<div 
 							className="header-content"
-							style={{textAlign: this.props.currentHeader.imgSrc ? "left" : "center"}} >
+							style={{ 
+								textAlign: this.props.currentHeader.imgSrc ? 
+									"left" : "center", 
+								maxWidth: this.props.currentHeader.imgSrc ? 
+									"535px" : "900px" 	
+							}}>
 							<h2 className="header-title">
 								{this.props.currentHeader.headerTitle}
 							</h2>

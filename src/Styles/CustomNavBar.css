@@ -35,17 +35,16 @@
 .link-container a,
 .link-container #last-nav-item-Link {
     color: rgb(149, 149, 149);
-    font-size: 1rem;
+    font-size: 16px;
     transition: color .2s;
     transition: font-size .2s;
-
 }
 
 .link-container a:hover,
 .link-container #last-nav-item-Link:hover {
     color:white;
     text-decoration: none;
-    font-size: 1.15rem;  
+    font-size: 18px;  
 }
 
 
