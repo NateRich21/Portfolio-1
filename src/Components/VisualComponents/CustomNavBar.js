@@ -8,12 +8,8 @@ class CustomNavBar extends React.Component {
 
   render() {
     return (
-      <div className="site-header">
-        <nav>
-          <div className="navbar-container">
-            <div className="brand-container">
-                <Logo />
-            </div>
+      <div className="CustomNavBar-grid-wrapper">
+            <div className="brand-container"><Logo /></div>
             <div className="link-container">
               <Link to="/about">About</Link>
             </div>
@@ -26,8 +22,6 @@ class CustomNavBar extends React.Component {
             <div className="link-container">
               <Link to="/tech" id='last-nav-item-Link'>Technologies</Link>
             </div>
-          </div>
-        </nav>
       </div>
     );
   }

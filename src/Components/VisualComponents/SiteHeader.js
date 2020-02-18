@@ -9,7 +9,7 @@ class SiteHeader extends React.Component {
 	configureButton = () => {
 		if (this.props.currentHeader.buttonText) {
 			return (
-				<div className="header-button-container">
+				<div className="SiteHeader-btn-container">
 					<Link to={this.props.currentHeader.buttonLinkPath}>
 						<MDBBtn 
 							color="info" 
@@ -25,10 +25,8 @@ class SiteHeader extends React.Component {
 	configureImage = () => {
 		if (this.props.currentHeader.imgSrc) {
 			return(
-				<div className="header-image">
-					<div className="img-figure">
-						<img src={this.props.currentHeader.imgSrc}/>
-					</div>  
+				<div className="SiteHeader-img-container">
+						<img src={this.props.currentHeader.imgSrc}/> 
 				</div>
 			)
 		}
@@ -36,15 +34,15 @@ class SiteHeader extends React.Component {
 
 		render() {
 			return(
-				<div className='my-header'>
-					<div className="header-container">
-						<div 
-							className="header-content"
+				<div className='SiteHeader-grid-wrapper'>
+						<div className="SiteHeader-text-container"
 							style={{ 
 								textAlign: this.props.currentHeader.imgSrc ? 
-									"left" : "center", 
-								maxWidth: this.props.currentHeader.imgSrc ? 
-									"535px" : "900px" 	
+									"left" : "center",
+								gridColumn: this.props.currentHeader.imgSrc ?
+									"2" : "2/4",
+								marginTop: this.props.currentHeader.imgSrc ?
+									"0px" : "20px"
 							}}>
 							<h2 className="header-title">
 								{this.props.currentHeader.headerTitle}
@@ -55,7 +53,6 @@ class SiteHeader extends React.Component {
 							{this.configureButton()}
 						</div>
 						{this.configureImage()}
-					</div>
 				</div>
 			)
 		}

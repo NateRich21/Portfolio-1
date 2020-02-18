@@ -1,0 +1,15 @@
+.InfoTextBox-grid-container {
+    text-align: left;
+}
+
+.InfoTextBox-grid-container h2 {
+    padding: .1em 14rem;
+}
+
+.InfoTextBox-grid-container p {
+    padding: .1rem 14rem    
+}
+
+.InfoTextBox-grid-container hr {
+
+}

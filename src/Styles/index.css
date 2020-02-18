@@ -5,3 +5,12 @@ body * {
 }
 
 
+.App-grid-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.App-grid-wrapper > div {
+
+}

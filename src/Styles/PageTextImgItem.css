@@ -1,0 +1,29 @@
+.PageTextImgItem-wrapper {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 0rem;
+}
+
+.PageTextImgItem-wrapper > div {
+}
+
+.PageText-content-container {
+    text-align: center;
+}
+
+.PageText-content-container p {
+    color: rgb(149, 149, 149);
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-img-container img {
+    max-height: 300px;
+    max-width: auto 0;
+}
+
+.PageText-hr-container {
+    grid-column: 1/3;
+}

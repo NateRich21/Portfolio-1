@@ -2,7 +2,7 @@ import React from 'react';
 import InfoTextBox from './PageComponents/InfoTextBox'
 import PageTextImgItem from './PageComponents/PageTextImgItem';
 
-import '../../Styles/Home.scss'
+import '../../Styles/Home.css'
 
 class Home extends React.Component {
 
@@ -13,11 +13,10 @@ class Home extends React.Component {
 
     render() {
         return(
-            <div className='home-page-main-container'>
+            <div className='HomePage-wrapper'>
                 <InfoTextBox />
                 <PageTextImgItem />
-                
-                <InfoTextBox />
+                <InfoTextBox /> 
             </div>
         )
     }

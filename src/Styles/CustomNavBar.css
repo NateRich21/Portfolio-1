@@ -1,53 +1,20 @@
-.site-header {
-    background-color: rgb(32, 32, 32);  
-}
-
-.navbar-container {
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 40px;
+.CustomNavBar-grid-wrapper {
+    display: grid;
+    background-color: rgb(32, 32, 32);
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
+    grid-column: 1/4;
     align-items: center;
-    align-content: stretch;
-    margin-right: 60px;
-    margin-left: 60px;
-
+    padding: 10px 5em;
 }
 
-
-.brand-container {
-    flex: 3;
-    font-weight: 0;
-    margin-right: 400px;
-    flex-basis: 350px;
-    padding-top: 8px;
+.CustomNavBar-grid-wrapper > div {
+    display: flex;
+    border: 1px white dotted;
+    padding: 1em;
+    
 }
 
-
-.link-container {
-    flex: 1;
-    text-align: center;
-    min-width: 120px;
-}
-
-
-
-
-.link-container a,
-.link-container #last-nav-item-Link {
-    color: rgb(149, 149, 149);
-    font-size: 16px;
-    transition: color .2s;
-    transition: font-size .2s;
-}
-
-.link-container a:hover,
-.link-container #last-nav-item-Link:hover {
-    color:white;
+.CustomNavBar-grid-wrapper a {
     text-decoration: none;
-    font-size: 18px;  
+    color: white;
 }
-
-
-
-
-
