@@ -1,5 +1,6 @@
 import React from 'react';
-import ContactForm from '../VisualComponents/ContactForm/ContactForm';
+
+import '../../Styles/Contact.css'
 
 class Contact extends React.Component {
 
@@ -10,8 +11,21 @@ class Contact extends React.Component {
 
     render() {
         return(
-            <div>
-                <ContactForm />
+            <div className="ContactPage-wrapper">
+                <div className="contact-info-container">
+                    <h2>My Email Address</h2>
+                    <hr />
+                    <p>nathanjrichardson3@gmail.com</p>
+                </div>
+                <div className="contact-info-container">
+                    <h2>My Phone Number</h2>
+                    <hr />
+                    <p>314-326-1044</p>
+                </div>
+                <div className="contact-info-rider">
+                    <h6>You can expect to hear back from me within 24 hours</h6>
+                </div>
+                
             </div>
         )
     }

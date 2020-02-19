@@ -32,6 +32,21 @@ class SiteHeader extends React.Component {
 		}
 	}
 
+	configureIcon = () => {
+		if (this.props.currentHeader.iconSrc) {
+			return(
+				<div className="SiteHeader-icon-container">
+					<a href="https://www.linkedin.com/in/nathan-richardson-214037156/?trk=profile-badge-cta">
+						<img src={this.props.currentHeader.iconSrc}/>
+						<img
+							className="img-top"
+							src={this.props.currentHeader.iconSrcAlt} />
+					</a> 
+				</div>
+			)
+		}
+	}
+
 		render() {
 			return(
 				<div className='SiteHeader-grid-wrapper'>
@@ -51,6 +66,7 @@ class SiteHeader extends React.Component {
 								{this.props.currentHeader.subText}
 							</h4>
 							{this.configureButton()}
+							{this.configureIcon()}
 						</div>
 						{this.configureImage()}
 				</div>

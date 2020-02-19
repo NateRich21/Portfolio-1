@@ -9,9 +9,9 @@ class Technologies extends React.Component {
 
     render() {
         return(
-            <div className='home-page-main-container'>
+            <div className='TechnologiesPage-wrapper'>
                 <section>
-                   <h1>Technologies</h1>
+                   <h1>Technologies Page coming soon</h1>
                 </section>
             </div>
         )

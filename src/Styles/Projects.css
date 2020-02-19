@@ -1,0 +1,12 @@
+.ProjectsPage-wrapper {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 30px;
+    justify-items: center;
+}
+
+Button a {
+    text-decoration: none;
+    color: white;
+}

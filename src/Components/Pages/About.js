@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBBtn } from 'mdbreact'
+import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 import '../../Styles/About.css';
@@ -30,11 +30,10 @@ class About extends React.Component {
                     <hr />
                     <div className='button-row'>
                         <Link to='/tech'>
-                            <MDBBtn color='info'>
+                            <Button color='info'>
                                 Technologies
-                            </MDBBtn>
+                            </Button>
                         </Link>
-                        <hr />
                     </div>
                 </div>
             </div>

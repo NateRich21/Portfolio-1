@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Rubik&display=swap');
 
+
+
 body * {
   font-family: "Rubik", sans-serif;
 }
@@ -14,3 +16,26 @@ body * {
 .App-grid-wrapper > div {
 
 }
+
+.HomePage-wrapper hr,
+.AboutPage-wrapper,
+.ProjectsPage-wrapper,
+.TechnologiesPage-wrapper,
+.ContactPage-wrapper hr {
+  
+}
+
+.TechnologiesPage-wrapper {
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: center;
+}
+
+/* .HomePage-wrapper > div:nth-child(even) {
+  background: linear-gradient(to left, #f0f0f0, #ffffff);
+}
+
+.HomePage-wrapper > div:nth-child(odd) {
+  background: linear-gradient(to right, #f0f0f0, #ffffff);
+}
+ */

@@ -15,9 +15,10 @@ export const headerContent = {
         imgSrc: "https://sebkay.com/assets/img/banner-home.jpg"
     },
     contact: {
-        headerTitle: "Contact me here.",
-        subText: "Get in touch, let me know what you need!",
-        buttonText: "Contact",
+        headerTitle: "Contact Me",
+        subText: "Click the icon to view my profile on LinkedIn and message me. Or, feel free to reach out using the information listed below!",
+        iconSrc: "https://static-exp1.licdn.com/scds/common/u/images/logos/linkedin/logo_linkedin_flat_white_93x21.png",
+        iconSrcAlt: "https://static-exp1.licdn.com/scds/common/u/images/logos/linkedin/logo_linkedin_93x21_v2.png",
         buttonLinkPath: "/contact"
     },
     tech: {

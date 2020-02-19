@@ -1,48 +1,25 @@
 .about-page-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    align-items: center;
+    grid-column: 2/3;
+    justify-items: center;
+    padding: 0px 13rem;
+    margin-bottom: 3rem;
 }
 
-.about-page {
-    text-align: left;
-    align-content: center;
-    max-width: 35%;
+.about-page p {
+    color: rgb(149, 149, 149);
+    font-family: 'Roboto', sans-serif;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin-bottom: .4em;
 }
 
-
+.about-page hr {
+    margin-bottom: 3rem;
+}
 
 .button-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-self: center;
+    justify-self: center;
     align-content: center;
-    text-align: center;
     justify-content: center;
-    padding-bottom: 30px;
-    padding-top: 20px;
-}
-
-.content-lg,
-.content-lg-top{
-    color: rgb(32, 32, 32);
-}
-
-.content-lg {
-    padding-top: 25px;
-    padding-bottom: 10px;
-}
-
-.content-sm {
-    color: rgb(100, 100, 100);
-    font-family: 'Roboto', sans-serif;
-    padding-bottom: 5px;
-    margin-bottom: 0px;
-    display: block;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 }

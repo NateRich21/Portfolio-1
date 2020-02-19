@@ -9,7 +9,6 @@
 
 .SiteHeader-grid-wrapper > div {
     display: flex;
-    border: 1px white dotted;
     padding: 1em;
     
 }
@@ -33,17 +32,45 @@
   align-content: center;
 }
 
-.SiteHeader-text-container > div {
-  border: white dotted
-}
-
 .SiteHeader-btn-container {
   align-self: center;
   align-items: center;
 }
 
+.SiteHeader-icon-container {
+  align-self: center;
+  align-items: center;
+  border: white solid 1px;
+  border-radius: 5px;
+  padding: .5em 1em;
+  transition: background .3s;
+  position: relative;
+  display: flex;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.SiteHeader-icon-container .img-top {
+  display: none;
+  position: absolute;
+  top: .6em;
+  left: 1em;
+}
+
+.SiteHeader-icon-container:hover {
+  background: white;
+}
+
+.SiteHeader-icon-container:hover .img-top{
+  display: flex;
+}
+
+
+
 .SiteHeader-img-container {
-  grid-column: 3 ;
+  grid-column: 3;
   justify-self: center;
 }
 

@@ -9,7 +9,6 @@
 
 .CustomNavBar-grid-wrapper > div {
     display: flex;
-    border: 1px white dotted;
     padding: 1em;
     
 }
@@ -17,4 +16,16 @@
 .CustomNavBar-grid-wrapper a {
     text-decoration: none;
     color: white;
+}
+
+.link-container a {
+    color: rgb(149, 149, 149);
+    font-size: 1rem;
+    transition: color .3s;
+    transition: font-size .3s;
+}
+
+.link-container a:hover {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
 }
