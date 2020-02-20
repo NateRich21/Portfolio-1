@@ -60,7 +60,7 @@ class Index extends React.Component {
                         urlPath={this.state.urlPath} 
                         imgCheck={this.headerHasImageCheck} />}
                     />
-                   <Switch>
+                   
                         <Route 
                             path="/" exact render={props => <Home {...props} 
                             updatePath={this.updatePath}
@@ -91,7 +91,7 @@ class Index extends React.Component {
                             urlPath={this.urlPath}
                             updateHeaderContent={this.updateHeaderContent} />}
                         />
-                   </Switch>
+                   
                 </Router>
            </div>
         )

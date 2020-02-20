@@ -14,9 +14,6 @@ class Home extends React.Component {
     render() {
         return(
             <div className='HomePage-wrapper'>
-                <InfoTextBox />
-                <PageTextImgItem />
-                <InfoTextBox /> 
             </div>
         )
     }
