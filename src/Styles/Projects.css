@@ -6,6 +6,11 @@
     justify-items: center;
 }
 
+.ProjectsPage-wrapper p {
+    color: rgb(138, 138, 138);
+    font-family: 'Roboto', sans-serif;
+}
+
 Button a {
     text-decoration: none;
     color: white;

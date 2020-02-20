@@ -47,7 +47,7 @@
   border: white solid 1px;
   border-radius: 5px;
   padding: .5em 1em;
-  transition: background .3s;
+  transition: background .1s;
   position: relative;
   display: flex;
   text-align: center;
@@ -79,6 +79,8 @@
 }
 
 .SiteHeader-img-container img {
+  box-sizing: border-box;
+  border: 1.5rem black solid;
   max-height: 400px;
   max-width: auto;
 }

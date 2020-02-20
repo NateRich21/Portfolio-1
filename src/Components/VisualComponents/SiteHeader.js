@@ -11,7 +11,7 @@ class SiteHeader extends React.Component {
 			return (
 				<div className="SiteHeader-btn-container">
 					<Link to={this.props.currentHeader.buttonLinkPath}>
-						<Button>
+						<Button variant="primary" size="lg">
 							{this.props.currentHeader.buttonText}
 						</Button>
 					</Link>
