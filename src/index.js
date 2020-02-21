@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Link, Route, Switch, BrowserRouter as Router} from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+
 
 import './Styles/index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import { headerContent } from './Components/Resources/HeaderContent.js'
 
@@ -17,6 +19,8 @@ import About from './Components/Pages/About.js';
 import Contact from './Components/Pages/Contact.js';
 import Technologies from './Components/Pages/Technologies.js';
 
+var _ = require('lodash');
+
 
 class Index extends React.Component {
     constructor(props) {
@@ -26,6 +30,7 @@ class Index extends React.Component {
             urlPath: "",
             headerContent: headerContent,
             currentHeader: {},
+            pageContent: [],
             headerHasImage: Boolean
         }
 
@@ -38,11 +43,22 @@ class Index extends React.Component {
     }
 
     updateHeaderContent = (pathname) => {
-        if (pathname === '/') {  this.setState({ currentHeader: this.state.headerContent.home })  };
-        if (pathname === '/about') {  this.setState({ currentHeader: this.state.headerContent.about })  };
-        if (pathname === '/projects') {  this.setState({ currentHeader: this.state.headerContent.projects })  };
-        if (pathname === '/contact') {  this.setState({ currentHeader: this.state.headerContent.contact })  };
-        if (pathname === '/tech') {  this.setState({ currentHeader: this.state.headerContent.tech })  };
+        if (pathname === '/') { this.setState({ 
+            currentHeader: _.get(headerContent, 'contentArray[2].home')
+        }) };
+        if (pathname === '/about') {  this.setState({ 
+            currentHeader: _.get(headerContent, 'contentArray[1].about') 
+        }) };
+        if (pathname === '/projects') {  this.setState({ 
+            currentHeader: _.get(headerContent, 'contentArray[0].projects') 
+        }) };
+        if (pathname === '/contact') {  this.setState({ 
+            currentHeader: _.get(headerContent, 'contentArray[3].contact') 
+        }) };
+        if (pathname === '/tech') {  this.setState({ 
+            currentHeader: _.get(headerContent, 'contentArray[4].tech'),
+            pageContent: _.get(headerContent, 'contentArray[4].tech.pageContent')
+        }) };
     }
 
     render() {
@@ -57,40 +73,43 @@ class Index extends React.Component {
                         path='/'
                         render={props => <SiteHeader {...props} 
                         currentHeader={this.state.currentHeader}
-                        urlPath={this.state.urlPath} 
-                        imgCheck={this.headerHasImageCheck} />}
+                        urlPath={this.state.urlPath} />}
                     />
                    
-                        <Route 
-                            path="/" exact render={props => <Home {...props} 
-                            updatePath={this.updatePath}
-                            urlPath={this.urlPath}
-                            updateHeaderContent={this.updateHeaderContent} />}
-                        />
-                        <Route
-                            path="/about" exact render={props => <About {...props} 
-                            updatePath={this.updatePath}
-                            urlPath={this.urlPath}
-                            updateHeaderContent={this.updateHeaderContent} />}
-                        />
-                        <Route 
-                            path="/projects" exact render={props => <Projects {...props} 
-                            updatePath={this.updatePath}
-                            urlPath={this.urlPath}
-                            updateHeaderContent={this.updateHeaderContent} />}
-                        />
-                        <Route 
-                            path="/contact" exact render={props => <Contact {...props} 
-                            updatePath={this.updatePath}
-                            urlPath={this.urlPath}
-                            updateHeaderContent={this.updateHeaderContent} />}
-                        />
-                        <Route
-                            path="/tech" exact render={props => <Technologies {...props} 
-                            updatePath={this.updatePath}
-                            urlPath={this.urlPath}
-                            updateHeaderContent={this.updateHeaderContent} />}
-                        />
+                        <Switch>
+                            <Route 
+                                path="/" exact render={props => <Home {...props} 
+                                updatePath={this.updatePath}
+                                urlPath={this.urlPath}
+                                updateHeaderContent={this.updateHeaderContent} />}
+                            />
+                            <Route
+                                path="/about" exact render={props => <About {...props} 
+                                updatePath={this.updatePath}
+                                urlPath={this.urlPath}
+                                updateHeaderContent={this.updateHeaderContent} />}
+                            />
+                            <Route 
+                                path="/projects" exact render={props => <Projects {...props} 
+                                updatePath={this.updatePath}
+                                urlPath={this.urlPath}
+                                updateHeaderContent={this.updateHeaderContent} />}
+                            />
+                            <Route 
+                                path="/contact" exact render={props => <Contact {...props} 
+                                updatePath={this.updatePath}
+                                urlPath={this.urlPath}
+                                updateHeaderContent={this.updateHeaderContent} />}
+                            />
+                            <Route
+                                path="/tech" exact render={props => <Technologies {...props} 
+                                updatePath={this.updatePath}
+                                urlPath={this.urlPath}
+                                updateHeaderContent={this.updateHeaderContent}
+                                currentHeader={this.state.currentHeader}
+                                pageContent={this.state.pageContent} />}
+                            />
+                        </Switch>
                    
                 </Router>
            </div>
