@@ -5,6 +5,7 @@
   background-color: rgb(36, 36, 36);
   padding-bottom: 200px;
   background: radial-gradient(110% 50% at bottom, transparent 50%, rgb(32, 32, 32) 51%);
+  justify-items: center;
 }
 
 .SiteHeader-flex-container {
@@ -33,7 +34,6 @@
   justify-content: space-evenly;
   align-content: center;
   justify-self: center;
-  padding: 1em 3em 1em 1em
 }
 
 .SiteHeader-btn-container {

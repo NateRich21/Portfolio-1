@@ -56,7 +56,8 @@ class SiteHeader extends React.Component {
 									gridColumn: this.props.currentHeader.imgSrc ?
 										"2" : "2/4",
 									marginTop: this.props.currentHeader.imgSrc ?
-										"0px" : "20px"
+										"0px" : "20px",
+									padding: this.props.currentHeader.imgSrc ? "1em 3em 1em 1em" : "1em"
 								}}>
 								<h2 className="header-title">
 									{this.props.currentHeader.headerTitle}
