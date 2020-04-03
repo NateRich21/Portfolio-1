@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import '../../Styles/CustomNavBar.css';
-import Logo from'../Resources/Logo';
+import '../../../Styles/CustomNavBar.css';
+import Logo from'../../Resources/Logo';
 class CustomNavBar extends React.Component {
 
 

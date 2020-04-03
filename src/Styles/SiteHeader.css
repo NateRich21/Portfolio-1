@@ -80,6 +80,6 @@
 .SiteHeader-img-container img {
   box-sizing: border-box;
   border: 1.5rem black solid;
-  max-height: 400px;
+  max-height: 500px;
   max-width: auto;
 }

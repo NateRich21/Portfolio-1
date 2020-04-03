@@ -8,7 +8,31 @@ export const headerContent = {
         {about: {
             id: 1,
             headerTitle: 'About Me',
-            subText: "Get a know a bit about me! I love to learn and have all kinds of projects I'm working on."
+            subText: "Get a know a bit about me! I love to learn and have all kinds of projects I'm working on.",
+            pageContent: [
+                {
+                    id: 0,
+                    textHeader: "Who I am",
+                    textBody: "I'm Nate Richardson, and I'm passionate about learning and creating \n\nBy day, I work in IT support. In the evenings, I work to become the best developer I can be."
+                },
+                {
+                    id: 1,
+                    textHeader: "Why I want to develop",
+                    textBody: "As someone with a great deal of passion around creativity, I love that programming allows me to take nearly any idea I have and make it a reality. \n\nIn addition to what it allows me to accomplish, I enjoy the process as a whole. I love problem solving, so of course I love to code."
+                },
+                {
+                    id: 2,
+                    textHeader: "What I know",
+                    textBody: "My primary focus has been web development. Although I have also started building native VR apps for android devices. \n\nFeel free to click over to the Technologies page and get a feel for the technologies I have a experience with.",
+                    buttonTo: '/tech',
+                    buttonText: 'Technologies'
+                },
+                {
+                    id: 3,
+                    textHeader: "Where I'm headed",
+                    textBody: "In the future, I hope to begin working in earnest on VR and AR applications.  \n\nI believe that AR tech is going to revolutionanize our society in unimaginable ways. I want to be as close to the forefront of that revolution as possible."
+                }
+            ]
         }},
         {home: {
             id: 2,
@@ -16,7 +40,7 @@ export const headerContent = {
             subText: 'Web designer and developer from St. Louis, MO. I create custom websites to help companies to succeed online.',
             buttonText: "My Projects",
             buttonLinkPath: "/projects",
-            imgSrc: "https://sebkay.com/assets/img/banner-home.jpg"
+            imgSrc: "https://i.imgur.com/C855ZpV.jpg"
         }},
         {contact: {
             id: 3, 
@@ -35,7 +59,7 @@ export const headerContent = {
                     id: 0,
                     imgSrc: "https://reactjs.org/logo-og.png",
                     textHeader: "React",
-                    textBody: "Most of my web development has used React libraries. I find its lack of bias towars project structure allows me to explore many different approaches and solutions to various problems."
+                    textBody: "Most of my web development has used React libraries. I find its lack of bias towards project structure allows me to explore many different approaches and solutions to various problems."
                 },
                 {
                     id: 1,

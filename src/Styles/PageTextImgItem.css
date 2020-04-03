@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-items: space-around;
-    justify-content: center;
+    justify-content: left;
 }
 
 .PageTextImgItem-flex-wrapper > div {
@@ -31,6 +31,7 @@
 .PageText-content-container p {
     color: rgb(149, 149, 149);
     font-family: 'Roboto', sans-serif;
+    white-space: pre-wrap;
 }
 
 .page-img-container img {

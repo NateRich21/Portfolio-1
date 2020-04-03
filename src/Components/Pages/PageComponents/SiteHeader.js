@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
-import '../../Styles/SiteHeader.css';
+import '../../../Styles/SiteHeader.css';
 
 class SiteHeader extends React.Component {
 
@@ -45,34 +45,34 @@ class SiteHeader extends React.Component {
 		}
 	}
 
-		render() {
-			return(
-				<div className='SiteHeader-grid-wrapper'>
-						<div className='SiteHeader-flex-container'>
-							<div className="SiteHeader-text-container"
-								style={{ 
-									textAlign: this.props.currentHeader.imgSrc ? 
-										"left" : "center",
-									gridColumn: this.props.currentHeader.imgSrc ?
-										"2" : "2/4",
-									marginTop: this.props.currentHeader.imgSrc ?
-										"0px" : "20px",
-									padding: this.props.currentHeader.imgSrc ? "1em 3em 1em 1em" : "1em"
-								}}>
-								<h2 className="header-title">
-									{this.props.currentHeader.headerTitle}
-								</h2>
-								<h4 className="header-subtitle">
-									{this.props.currentHeader.subText}
-								</h4>
-								{this.configureButton()}
-								{this.configureIcon()}
-							</div>
-							{this.configureImage()}
+	render() {
+		return(
+			<div className='SiteHeader-grid-wrapper'>
+					<div className='SiteHeader-flex-container'>
+						<div className="SiteHeader-text-container"
+							style={{ 
+								textAlign: this.props.currentHeader.imgSrc ? 
+									"left" : "center",
+								gridColumn: this.props.currentHeader.imgSrc ?
+									"2" : "2/4",
+								marginTop: this.props.currentHeader.imgSrc ?
+									"0px" : "20px",
+								padding: this.props.currentHeader.imgSrc ? "1em 3em 1em 1em" : "1em"
+							}}>
+							<h2 className="header-title">
+								{this.props.currentHeader.headerTitle}
+							</h2>
+							<h4 className="header-subtitle">
+								{this.props.currentHeader.subText}
+							</h4>
+							{this.configureButton()}
+							{this.configureIcon()}
 						</div>
-				</div>
-			)
-		}
+						{this.configureImage()}
+					</div>
+			</div>
+		)
+	}
 }
 
 export default SiteHeader;

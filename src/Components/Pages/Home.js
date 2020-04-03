@@ -1,7 +1,4 @@
 import React from 'react';
-import InfoTextBox from './PageComponents/InfoTextBox'
-import PageTextImgItem from './PageComponents/PageTextImgItem';
-
 import '../../Styles/Home.css'
 
 class Home extends React.Component {

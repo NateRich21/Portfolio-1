@@ -11,8 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { headerContent } from './Components/Resources/HeaderContent.js'
 
 
-import SiteHeader from './Components/VisualComponents/SiteHeader';
-import CustomNavBar from './Components/VisualComponents/CustomNavBar.js';
+import SiteHeader from './Components/Pages/PageComponents/SiteHeader';
+import CustomNavBar from './Components/Pages/PageComponents/CustomNavBar';
 import Home from './Components/Pages/Home.js';
 import Projects from './Components/Pages/Projects.js';
 import About from './Components/Pages/About.js';
@@ -44,10 +44,11 @@ class Index extends React.Component {
 
     updateHeaderContent = (pathname) => {
         if (pathname === '/') { this.setState({ 
-            currentHeader: _.get(headerContent, 'contentArray[2].home')
+            currentHeader: _.get(headerContent, 'contentArray[2].home')  
         }) };
-        if (pathname === '/about') {  this.setState({ 
-            currentHeader: _.get(headerContent, 'contentArray[1].about') 
+        if (pathname === '/about') { this.setState({ 
+            currentHeader: _.get(headerContent, 'contentArray[1].about'),
+            pageContent: _.get(headerContent, 'contentArray[1].about.pageContent')
         }) };
         if (pathname === '/projects') {  this.setState({ 
             currentHeader: _.get(headerContent, 'contentArray[0].projects') 
@@ -87,7 +88,9 @@ class Index extends React.Component {
                                 path="/about" exact render={props => <About {...props} 
                                 updatePath={this.updatePath}
                                 urlPath={this.urlPath}
-                                updateHeaderContent={this.updateHeaderContent} />}
+                                updateHeaderContent={this.updateHeaderContent}
+                                currentHeader={this.state.currentHeader}
+                                pageContent={this.state.pageContent} />}
                             />
                             <Route 
                                 path="/projects" exact render={props => <Projects {...props} 
